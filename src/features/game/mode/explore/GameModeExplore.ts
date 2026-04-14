@@ -171,7 +171,11 @@ class GameModeExplore implements IGameUI {
       const locationName = nextLocation.name;
       GameGlobalAPI.getInstance().setDefaultCursor(ExploreModeConstants.move);
       GameGlobalAPI.getInstance().displayTooltip(x, y, locationName);
-    } else if (objectProp && objectProp.isChat && ! GameGlobalAPI.getInstance().getGameManager().talkToggled) {
+    } else if (
+      objectProp &&
+      objectProp.isChat &&
+      !GameGlobalAPI.getInstance().getGameManager().talkToggled
+    ) {
       GameGlobalAPI.getInstance().setDefaultCursor(ExploreModeConstants.chat);
     } else {
       if (hasTriggered) {
