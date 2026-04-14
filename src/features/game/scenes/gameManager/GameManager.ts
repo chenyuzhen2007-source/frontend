@@ -56,6 +56,7 @@ type GameManagerProps = {
 class GameManager extends Phaser.Scene {
   public currentLocationId: LocationId;
   public hasTransitioned: boolean;
+  public talkToggled: boolean = false;
   private stateManager?: GameStateManager;
   private layerManager?: GameLayerManager;
   private objectManager?: GameObjectManager;

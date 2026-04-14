@@ -145,6 +145,8 @@ class GameModeTalk implements IGameUI {
    */
   public async activateUI(): Promise<void> {
     const gameManager = GameGlobalAPI.getInstance().getGameManager();
+    gameManager.talkToggled = true;
+    console.log(gameManager.talkToggled);
     this.uiContainer = this.createUIContainer();
     GameGlobalAPI.getInstance().addToLayer(Layer.UI, this.uiContainer);
 
@@ -176,6 +178,7 @@ class GameModeTalk implements IGameUI {
    */
   public async deactivateUI(): Promise<void> {
     const gameManager = GameGlobalAPI.getInstance().getGameManager();
+    gameManager.talkToggled = false;
     this.removeKeyboardListener();
     if (this.uiContainer) {
       this.uiContainer.setPosition(this.uiContainer.x, 0);

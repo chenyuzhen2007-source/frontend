@@ -14,8 +14,7 @@ export enum Layer {
   Dashboard,
   WorkerMessage,
   QuizSpeakerBox,
-  QuizSpeaker,
-  Tooltip
+  QuizSpeaker
 }
 
 // Back to Front
@@ -35,6 +34,5 @@ export const defaultLayerSequence = [
   Layer.Dashboard,
   Layer.Escape,
   Layer.UI,
-  Layer.Tooltip,
   Layer.WorkerMessage
 ];

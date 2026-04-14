@@ -1,8 +1,13 @@
+import GameGlobalAPI from '../../scenes/gameManager/GameGlobalAPI';
 import GameModeTalk from './GameModeTalk';
 
 class TopicListManager {
   public generateTopicList() {
-    new GameModeTalk().activateUI();
+    console.log("called");
+    console.log(GameGlobalAPI.getInstance().getGameManager().talkToggled);
+    if (! GameGlobalAPI.getInstance().getGameManager().talkToggled) {
+      new GameModeTalk().activateUI();
+    }
   }
 }
 
